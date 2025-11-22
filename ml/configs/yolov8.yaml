@@ -1,0 +1,18 @@
+id: "yolov8"
+model: "YOLOv8"
+input_size: [640, 640]
+num_classes: 3
+class_names: ["coat", "shoes", "gloves"]
+train:
+  epochs: 50
+  batch_size: 16
+  learning_rate: 0.001
+  weight_decay: 0.0005
+  data_augmentation:
+    flip: true
+    rotation: 10
+    scale: [0.8, 1.2]
+inference:
+  confidence_threshold: 0.5
+  nms_threshold: 0.4
+  image_size: [640, 640]

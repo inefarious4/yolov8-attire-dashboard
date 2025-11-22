@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv8 Attire Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Provide process.env before the bundle loads to avoid "process is not defined" from some libs -->
+    <script>
+        if (typeof window.process === 'undefined') {
+            window.process = { env: {} };
+        }
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="bundle.js"></script>
+</body>
+</html>
